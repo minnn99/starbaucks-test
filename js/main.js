@@ -50,7 +50,6 @@ toTopEl.addEventListener('click', function () {
   });
 });
 
-
 const fadeEls = document.querySelectorAll('.visual .fade-in');
 fadeEls.forEach(function (fadeEl, index) {
   gsap.to(fadeEl, 0.6, {
@@ -58,7 +57,6 @@ fadeEls.forEach(function (fadeEl, index) {
     opacity: 1
   });
 });
-
 
 new Swiper('.notice-line .swiper', {
   direction: 'vertical',
@@ -108,7 +106,6 @@ promotionToggleBtn.addEventListener('click', function () {
     promotionEl.classList.remove('hide');
   }
 });
-
 
 // 범위 랜덤 함수(소수점 2자리까지)
 function random(min, max) {
