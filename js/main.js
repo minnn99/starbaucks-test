@@ -1,20 +1,3 @@
-const searchEl = document.querySelector('.search');
-const searchInputEl = searchEl.querySelector('input');
-
-searchEl.addEventListener('click', function () {
-  searchInputEl.focus();
-});
-
-searchInputEl.addEventListener('focus', function () {
-  searchEl.classList.add('focused');
-  searchInputEl.setAttribute('placeholder', 'Search..');
-});
-
-searchInputEl.addEventListener('blur', function () {
-  searchEl.classList.remove('focused');
-  searchInputEl.setAttribute('placeholder', '');
-});
-
 const badgeEl = document.querySelector('header .badges');
 const toTopEl = document.querySelector('#to-top');
 
@@ -50,7 +33,6 @@ toTopEl.addEventListener('click', function () {
   });
 });
 
-
 const fadeEls = document.querySelectorAll('.visual .fade-in');
 fadeEls.forEach(function (fadeEl, index) {
   gsap.to(fadeEl, 0.6, {
@@ -58,7 +40,6 @@ fadeEls.forEach(function (fadeEl, index) {
     opacity: 1
   });
 });
-
 
 new Swiper('.notice-line .swiper', {
   direction: 'vertical',
@@ -109,7 +90,6 @@ promotionToggleBtn.addEventListener('click', function () {
   }
 });
 
-
 // 범위 랜덤 함수(소수점 2자리까지)
 function random(min, max) {
   // `.toFixed()`를 통해 반환된 문자 데이터를,
@@ -143,6 +123,3 @@ spyEls.forEach(function (spyEl) {
     .setClassToggle(spyEl, 'show')
     .addTo(new ScrollMagic.Controller());
 });
-
-const thisYear = document.querySelector('.this-year');
-thisYear.textContent = new Date().getFullYear();
